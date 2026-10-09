@@ -1,0 +1,22 @@
+{
+  "name": "tapcub/tapcub-php",
+  "description": "TapCub server-side analytics SDK for PHP",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://tapcub.com",
+  "keywords": ["tapcub", "analytics", "events"],
+  "support": {
+    "issues": "https://github.com/tapcub/tapcub-php/issues",
+    "source": "https://github.com/tapcub/tapcub-php"
+  },
+  "require": {
+    "php": ">=8.0",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "TapCub\\": "src/"
+    }
+  }
+}
