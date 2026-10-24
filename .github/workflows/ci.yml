@@ -28,5 +28,5 @@ jobs:
       - run: composer install --no-interaction --no-progress
       - name: Lint
         run: find src -name '*.php' -print0 | xargs -0 -n1 php -l
-      - name: Autoload smoke
-        run: php -r 'require "vendor/autoload.php"; new TapCub\TapCub("k", "https://example.com"); echo "ok\n";'
+      - name: Tests (shared track vectors, transport against php -S)
+        run: vendor/bin/phpunit

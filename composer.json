@@ -1,22 +1,37 @@
 {
-  "name": "tapcub/tapcub-php",
-  "description": "TapCub server-side analytics SDK for PHP",
-  "type": "library",
-  "license": "MIT",
-  "homepage": "https://tapcub.com",
-  "keywords": ["tapcub", "analytics", "events"],
-  "support": {
-    "issues": "https://github.com/tapcub/tapcub-php/issues",
-    "source": "https://github.com/tapcub/tapcub-php"
-  },
-  "require": {
-    "php": ">=8.0",
-    "ext-curl": "*",
-    "ext-json": "*"
-  },
-  "autoload": {
-    "psr-4": {
-      "TapCub\\": "src/"
+    "name": "tapcub/tapcub-php",
+    "description": "TapCub server-side SDK for PHP: events, sign-ups, identities, user profiles, items and accounts",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://tapcub.com",
+    "keywords": ["tapcub", "analytics", "server-side", "events", "tracking", "product-analytics"],
+    "authors": [{ "name": "TapCub", "email": "hello@tapcub.com", "homepage": "https://tapcub.com" }],
+    "support": {
+        "issues": "https://github.com/tapcub/tapcub-php/issues",
+        "source": "https://github.com/tapcub/tapcub-php",
+        "docs": "https://docs.tapcub.com/en/sdk/server#php"
+    },
+    "require": {
+        "php": ">=8.0",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    },
+    "suggest": {
+        "ext-zlib": "Needed for the gzip option"
+    },
+    "autoload": {
+        "psr-4": { "TapCub\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "TapCub\\Tests\\": "tests/" }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
     }
-  }
 }
