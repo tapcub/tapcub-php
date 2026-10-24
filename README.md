@@ -39,7 +39,7 @@ Create the key in the TapCub console under **Configuration › Settings › API 
 
 | Option | Default | Description |
 |---|---|---|
-| `$endpoint` | `https://api.pathclue.com` | Origin of the ingest API. A trailing `/api/v1/track` is removed |
+| `$endpoint` | built in | Leave unset. Set it only when TapCub gives you a dedicated address (private deployment). A trailing `/api/v1/track` is removed |
 | `consumer` | `'sync'` | `'sync'`: send on every call; methods return the server response and throw `TapCubException` on failure. `'batch'`: queue and send when `maxBatch` is reached, on `flush()` / `close()` and at the end of the request. `'debug'`: like `'sync'` against `?debug=1` (validated, nothing stored), every result is logged |
 | `maxBatch` | `200` | Events per request (at most 1000). Requests are also kept under 1 MB |
 | `maxQueueSize` | `10000` | Queued events kept in memory; the oldest are dropped beyond this |

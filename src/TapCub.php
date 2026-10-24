@@ -50,7 +50,7 @@ class TapCub
 
     /**
      * @param string $apiKey project API key (`wck_…`) with the `track:write` scope
-     * @param string|null $endpoint origin of the ingest API, default https://api.pathclue.com
+     * @param string|null $endpoint leave null: the TapCub ingest API is built in. Set it only for a dedicated address TapCub gives you.
      * @param array{consumer?: string, maxBatch?: int, maxQueueSize?: int, maxRetries?: int, timeout?: float, gzip?: bool, onError?: callable, logger?: object} $options
      */
     public function __construct(string $apiKey, ?string $endpoint = null, array $options = [])
